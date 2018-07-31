@@ -9,14 +9,16 @@ https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#ubuntu-ins
 https://developer.nvidia.com/cuda-80-ga2-download-archive  
 I chose "deb" method instead of "run" method. "run" method gave errors while installation.
 
-2. after installation  
+2. reboot or open a new terminal
+
+3. after installation  
 https://www.pyimagesearch.com/2017/09/27/setting-up-ubuntu-16-04-cuda-gpu-for-deep-learning-with-python/  
 Now that the NVIDIA CUDA driver and tools are installed, you need to update your ~/.bashrc  file to include CUDA Toolkit (I suggest using terminal text editors such as vim , emacs , or  nano ):
 ```
 $ export PATH=/usr/local/cuda-8.0/bin:$PATH
 $ export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64/
 ```
-3. verify the installation
+4. verify the installation
 Now, reload your ~/.bashrc  ( source ~/.bashrc ) and then test the CUDA Toolkit installation by compiling the deviceQuery  example program and running it:
 ```
 $ source ~/.bashrc
