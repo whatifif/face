@@ -8,7 +8,7 @@ https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#ubuntu-ins
 1. download cuda 8 version: Tensorflow uses this version.  
 https://developer.nvidia.com/cuda-80-ga2-download-archive
 
-2. after installation
+2. after installation  
 https://www.pyimagesearch.com/2017/09/27/setting-up-ubuntu-16-04-cuda-gpu-for-deep-learning-with-python/  
 Now that the NVIDIA CUDA driver and tools are installed, you need to update your ~/.bashrc  file to include CUDA Toolkit (I suggest using terminal text editors such as vim , emacs , or  nano ):
 ```
