@@ -14,10 +14,14 @@ I chose "deb" method instead of "run" method. "run" method gave errors while ins
 3. after installation  
 https://www.pyimagesearch.com/2017/09/27/setting-up-ubuntu-16-04-cuda-gpu-for-deep-learning-with-python/  
 Now that the NVIDIA CUDA driver and tools are installed, you need to update your ~/.bashrc  file to include CUDA Toolkit (I suggest using terminal text editors such as vim , emacs , or  nano ):
+Add the following to the end of .bashrc file.
+
 ```
-$ export PATH=/usr/local/cuda-8.0/bin:$PATH
-$ export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64/
+# NVIDIA CUDA Toolkit
+export PATH=/usr/local/cuda-8.0/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64/
 ```
+
 4. verify the installation
 Now, reload your ~/.bashrc  ( source ~/.bashrc ) and then test the CUDA Toolkit installation by compiling the deviceQuery  example program and running it:
 ```
@@ -56,4 +60,4 @@ $ cd ~
 
 ## 3. Create your Python virtual environment
 I will use anaconda instead of virtualenv
-
+https://conda.io/docs/user-guide/install/linux.html
