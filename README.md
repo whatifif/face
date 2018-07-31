@@ -53,3 +53,7 @@ $ sudo cp -P lib64/* /usr/local/cuda/lib64/
 $ sudo cp -P include/* /usr/local/cuda/include/
 $ cd ~
 ```
+
+## Create your Python virtual environment
+I will use anaconda instead of virtualenv
+
