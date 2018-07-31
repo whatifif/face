@@ -117,7 +117,7 @@ conda update spyder
 ```
 1. create conda environment named "dl4cv" and use it.
 ```
-conda create -n dl4cv -p python3
+conda create -n dl4cv python=3.6
 source activate dl4cv
 ```
 
