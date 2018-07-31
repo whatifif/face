@@ -7,6 +7,11 @@ $ sudo apt-get update
 $ sudo apt-get upgrade
 ```
 
+if upgrade error occurs:
+```
+sudo apt-get upgrade --fix-missing
+```
+
 ```
 $ sudo apt-get install build-essential cmake git unzip pkg-config
 $ sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
