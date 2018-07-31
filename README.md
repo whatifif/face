@@ -1,7 +1,7 @@
 # face
 face recognition
 
-## how to install cuda on ubuntu 16.04
+## how to install cuda 8.0 on ubuntu 16.04
 0. NVIDIA CUDA Installation Guide for Linux  
 https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#ubuntu-installation
 
