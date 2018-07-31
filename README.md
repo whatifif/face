@@ -44,3 +44,12 @@ Cuda compilation tools, release 8.0, V8.0.61
 ## 2. install cuDNN 
 Download cuDNN v6.0 (April 27, 2017), for CUDA 8.0
 
+Next, untar the file and then copy the resulting files into lib64  and  include  respectively, using the -P  switch to preserve sym-links:
+```
+$ cd ~
+$ tar -zxf cudnn-8.0-linux-x64-v6.0.tgz
+$ cd cuda
+$ sudo cp -P lib64/* /usr/local/cuda/lib64/
+$ sudo cp -P include/* /usr/local/cuda/include/
+$ cd ~
+```
