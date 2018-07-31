@@ -66,3 +66,18 @@ To avoid the error in launching spyder, update conda.
 conda update --all
 conda update spyder
 ```
+1. create conda environment named "dl4cv" and use it.
+```
+conda create -n dl4cv
+source activate dl4cv
+```
+
+2. install numpy
+```
+conda install numpy
+```
+
+## 4. Compile and Install OpenCV  
+
+
+
