@@ -32,6 +32,24 @@ $ sudo apt-get install linux-image-generic linux-image-extra-virtual
 $ sudo apt-get install linux-source linux-headers-generic
 ```
 
+error occurs
+```
+Adding boot menu entry for EFI firmware configuration
+done
+Setting up linux-image-extra-4.4.0-131-generic (4.4.0-131.157) ...
+run-parts: executing /etc/kernel/postinst.d/apt-auto-removal 4.4.0-131-generic /boot/vmlinuz-4.4.0-131-generic
+run-parts: executing /etc/kernel/postinst.d/dkms 4.4.0-131-generic /boot/vmlinuz-4.4.0-131-generic
+Error! Your kernel headers for kernel 4.4.0-131-generic cannot be found.
+Please install the linux-headers-4.4.0-131-generic package,
+or use the --kernelsourcedir option to tell DKMS where it's located
+Error! Your kernel headers for kernel 4.4.0-131-generic cannot be found.
+Please install the linux-headers-4.4.0-131-generic package,
+or use the --kernelsourcedir option to tell DKMS where it's located
+run-parts: executing /etc/kernel/postinst.d/initramfs-tools 4.4.0-131-generic /boot/vmlinuz-4.4.0-131-generic
+
+```
+
+
 ## 1. install cuda 8.0 on ubuntu 16.04
 0. NVIDIA CUDA Installation Guide for Linux  
 https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#ubuntu-installation
