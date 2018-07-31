@@ -32,7 +32,7 @@ $ sudo apt-get install linux-image-generic linux-image-extra-virtual
 $ sudo apt-get install linux-source linux-headers-generic
 ```
 
-error occurs
+error occurs while "sudo apt-get install linux-image-generic linux-image-extra-virtual"
 ```
 Adding boot menu entry for EFI firmware configuration
 done
