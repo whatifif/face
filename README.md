@@ -6,7 +6,7 @@ face recognition
 https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#ubuntu-installation
 
 1. download cuda 8 version: Tensorflow uses this version.  
-https://developer.nvidia.com/cuda-80-ga2-download-archive
+https://developer.nvidia.com/cuda-80-ga2-download-archive  
 I chose "deb" method not "run" method. "run" method gave me errors while installation.
 
 2. after installation  
