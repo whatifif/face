@@ -59,9 +59,9 @@ $ cd ~
 ```
 
 ## 3. Create your Python virtual environment
-I will use anaconda instead of virtualenv
+I will use anaconda instead of virtualenv  
 https://conda.io/docs/user-guide/install/linux.html
-
+To avoid the error in launching spyder, update conda.
 ```
 conda update --all
 conda update spyder
