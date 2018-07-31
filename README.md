@@ -9,7 +9,7 @@ https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#ubuntu-ins
 https://developer.nvidia.com/cuda-80-ga2-download-archive  
 I chose "deb" method instead of "run" method. "run" method gave errors while installation.
 
-2. reboot or open a new terminal
+2. Reboot the system to load the NVIDIA drivers.
 
 3. after installation  
 https://www.pyimagesearch.com/2017/09/27/setting-up-ubuntu-16-04-cuda-gpu-for-deep-learning-with-python/  
