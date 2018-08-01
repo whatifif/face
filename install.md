@@ -228,7 +228,7 @@ $ workon dl4cv
 6. Installing NumPy
 ```
 pip install numpy
-``
+```
 
 ## 5. Compile and Install OpenCV
 
