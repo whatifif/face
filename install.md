@@ -50,6 +50,7 @@ or use the --kernelsourcedir option to tell DKMS where it's located
 run-parts: executing /etc/kernel/postinst.d/initramfs-tools 4.4.0-131-generic /boot/vmlinuz-4.4.0-131-generic
 
 ```
+==> When tried another installation ubuntu 16.04, this error did not show up anymore.
 
 
 ## 1. install cuda 8.0 on ubuntu 16.04
@@ -59,6 +60,30 @@ https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#ubuntu-ins
 1. download cuda 8 version: Tensorflow uses this version.  
 https://developer.nvidia.com/cuda-80-ga2-download-archive  
 I chose "deb" method instead of "run" method. "run" method gave errors while installation.
+Installation Instructions:
+```
+`sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb`
+`sudo apt-get update`
+`sudo apt-get install cuda`
+```
+```
+sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-cublas-performance-update_8.0.61-1_amd64.deb
+sudo apt-get update
+sudo apt-get install cuda
+```
+==> 
+```
+sudo apt-get install cuda
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+cuda is already the newest version (8.0.61-1).
+The following package was automatically installed and is no longer required:
+  libllvm5.0
+Use 'sudo apt autoremove' to remove it.
+0 to upgrade, 0 to newly install, 0 to remove and 2 not to upgrade.
+```
+
 
 2. Reboot the system to load the NVIDIA drivers.
 
