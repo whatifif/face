@@ -133,7 +133,7 @@ $ sudo cp -P lib64/* /usr/local/cuda/lib64/
 $ sudo cp -P include/* /usr/local/cuda/include/
 $ cd ~
 ```
-
+------------------------------------------------------ bad
 ## 3. Create your Python virtual environment
 I will use anaconda instead of virtualenv  
 https://conda.io/docs/user-guide/install/linux.html
@@ -152,7 +152,6 @@ source activate dl4cv
 ```
 conda install numpy
 ```
-
 ## 4. Compile and Install OpenCV  
 I used the opencv 3.4.1 instead of 3.3.0
 
@@ -183,6 +182,16 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 ```
 ==> import cv2 failed.
 ==> So lets try virtualenv instead of anaconda
+
+3. conda install
+https://anaconda.org/conda-forge/opencv
+To install this package with conda run one of the following:
+```
+conda install -c conda-forge opencv 
+conda install -c conda-forge/label/broken opencv 
+```
+======================================================
+
 ## Create your Python virtual environment
 1. install pip
 ```
@@ -193,12 +202,86 @@ $ sudo python3 get-pip.py
 
 2. Installing virtualenv and virtualenvwrapper
 
-==> import cv2 fails
+```
+$ sudo pip install virtualenv virtualenvwrapper
+$ sudo rm -rf ~/.cache/pip get-pip.py
+```
+3. add to .bashrc
+```
+sudo nano ~/.bashrc
+```
+```
+# virtualenv and virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source /usr/local/bin/virtualenvwrapper.sh
+```
+4. Creating the dl4cv virtual environment
+```
+$ mkvirtualenv dl4cv -p python3
+```
+5. Verifying that you are in the “dl4cv” virtual environment
+```
+$ workon dl4cv
+```
 
-3. conda install
-https://anaconda.org/conda-forge/opencv
-To install this package with conda run one of the following:
+6. Installing NumPy
 ```
-conda install -c conda-forge opencv 
-conda install -c conda-forge/label/broken opencv 
+pip install numpy
+``
+
+## 5. Compile and Install OpenCV
+
+1. get opencv 3.3.0
 ```
+$ cd ~
+$ wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.3.0.zip
+$ wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.3.0.zip
+```
+```
+$ unzip opencv.zip
+$ unzip opencv_contrib.zip
+```
+
+2. cmake
+```
+$ cd ~/opencv-3.3.0/
+$ mkdir build
+$ cd build
+$ cmake -D CMAKE_BUILD_TYPE=RELEASE \
+    -D CMAKE_INSTALL_PREFIX=/usr/local \
+    -D WITH_CUDA=OFF \
+    -D INSTALL_PYTHON_EXAMPLES=ON \
+    -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.3.0/modules \
+    -D BUILD_EXAMPLES=ON ..
+ ```
+ 
+ 3. Compiling OpenCV
+ ```
+ $ make -j4
+ ```
+ ```
+ $ sudo make install
+ $ sudo ldconfig
+ $ cd ~
+```
+
+ 4. Symbolic linking OpenCV to your virtual environment
+ 
+ ```
+ $ cd ~/.virtualenvs/dl4cv/lib/python3.5/site-packages/
+ $ ln -s /usr/local/lib/python3.5/site-packages/cv2.cpython-35m-x86_64-linux-gnu.so cv2.so
+ $ cd ~
+```
+
+5. Testing your OpenCV 3.3 install
+```
+$ python
+>>> import cv2
+>>> cv2.__version__
+'3.3.0'
+```
+ 
+ 
+ 
+ 
