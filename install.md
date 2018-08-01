@@ -141,4 +141,37 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D BUILD_EXAMPLES=ON ..
     
  ```
+ ==> The result is different from pyimagesearch.
 
+==>  So opencv 3.3.0 is tried. The result is what is expected.
+```
+-- 
+--   Python 2:
+--     Interpreter:                 /usr/bin/python2.7 (ver 2.7.12)
+-- 
+--   Python 3:
+--     Interpreter:                 /home/whatif/anaconda3/bin/python3 (ver 3.6.6)
+-- 
+--   Python (for build):            /usr/bin/python2.7
+```
+==> import cv2 failed.
+==> So lets try virtualenv instead of anaconda
+## Create your Python virtual environment
+1. install pip
+```
+$ wget https://bootstrap.pypa.io/get-pip.py
+$ sudo python get-pip.py
+$ sudo python3 get-pip.py
+```
+
+2. Installing virtualenv and virtualenvwrapper
+
+==> import cv2 fails
+
+3. conda install
+https://anaconda.org/conda-forge/opencv
+To install this package with conda run one of the following:
+```
+conda install -c conda-forge opencv 
+conda install -c conda-forge/label/broken opencv 
+```
