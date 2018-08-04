@@ -91,6 +91,9 @@ Use 'sudo apt autoremove' to remove it.
 https://www.pyimagesearch.com/2017/09/27/setting-up-ubuntu-16-04-cuda-gpu-for-deep-learning-with-python/  
 Now that the NVIDIA CUDA driver and tools are installed, you need to update your ~/.bashrc  file to include CUDA Toolkit (I suggest using terminal text editors such as vim , emacs , or  nano ):
 Add the following to the end of .bashrc file.
+```
+sudo nano ~/.bashrc
+```
 
 ```
 # NVIDIA CUDA Toolkit
@@ -207,15 +210,25 @@ $ sudo pip install virtualenv virtualenvwrapper
 $ sudo rm -rf ~/.cache/pip get-pip.py
 ```
 3. add to .bashrc
+
+- open bashrc
 ```
 sudo nano ~/.bashrc
 ```
+
+- add the following
 ```
 # virtualenv and virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source /usr/local/bin/virtualenvwrapper.sh
 ```
+
+- reload bashrc
+```
+source ~/.bashrc
+```
+
 4. Creating the dl4cv virtual environment
 ```
 $ mkvirtualenv dl4cv -p python3
@@ -229,6 +242,8 @@ $ workon dl4cv
 ```
 pip install numpy
 ```
+
+## from now on, always work under this "dl4cv" virtualenv
 
 ## 5. Compile and Install OpenCV
 
@@ -255,8 +270,9 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.3.0/modules \
     -D BUILD_EXAMPLES=ON ..
  ```
+ 3. if "configuration error" occurs, reboot and try again.
  
- 3. Compiling OpenCV
+ 4. Compiling OpenCV
  ```
  $ make -j4
  ```
@@ -266,7 +282,7 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
  $ cd ~
 ```
 
- 4. Symbolic linking OpenCV to your virtual environment
+ 5. Symbolic linking OpenCV to your virtual environment
  
  ```
  $ cd ~/.virtualenvs/dl4cv/lib/python3.5/site-packages/
@@ -274,7 +290,7 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
  $ cd ~
 ```
 
-5. Testing your OpenCV 3.3 install
+6. Testing your OpenCV 3.3 install
 ```
 $ python
 >>> import cv2
