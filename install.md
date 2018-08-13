@@ -86,6 +86,7 @@ Use 'sudo apt autoremove' to remove it.
 
 
 2. Reboot the system to load the NVIDIA drivers.
+NVIDIA driver is now downgraded to 384.130 after installation of cuda 8.0
 
 3. after installation  
 https://www.pyimagesearch.com/2017/09/27/setting-up-ubuntu-16-04-cuda-gpu-for-deep-learning-with-python/  
