@@ -37,6 +37,6 @@ python recognize_faces_video_file.py --encodings encodings.pickle \
 	--input videos/lunch_scene.mp4 --output output/lunch_scene_output.avi \
 	--display 0
 ```
-=> This takes around 4 min. with GTX 1080 Ti 
+=> Around 4 min video takes around 4 min processing with GTX 1080 Ti. This shows a real-time processing.
 
 
